@@ -123,7 +123,7 @@ int main(int argc, char* argv[]) {
 		40,
 		5,
 		5,
-		-3,
+		-1,
 		-3,
 		0xFF666666,
 		0xffffffff,
