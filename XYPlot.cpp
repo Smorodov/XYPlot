@@ -278,7 +278,7 @@ void plotGrid(XYDrawingBackend* ctx,
 		ctx->setFillColorI(axisTextColor);
 		ctx->setStrokeWidth(1);				
 		ctx->putText(
-			lx + 60,
+			lx + maxLegendLineLength,
 			pt_nodes_y[0],
 			track.name,
 			textFontName,

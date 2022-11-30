@@ -59,14 +59,9 @@ int main(int argc, char* argv[])
 #include <string.h>
 
 int main(int argc, char* argv[]) {
-	XYBlend2dBackend be(600, 600);
+	XYBlend2dBackend be(1200, 600);
 	be.setFillColor4I(255, 20, 255, 255);
 
-	std::vector<float> pattern = { 10,4 };
-	be.setStrokePattern(pattern, 0);
-	std::vector<float> px = { 100,130,200,240,400 };
-	std::vector<float> py = { 40,60,200,100,400 };
-	be.dashedPolyline(px, py);
 
 	std::vector<unsigned int> colors =
 	{ 0xffff0000,
@@ -112,7 +107,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	be.translate(0, 0);
-	be.scale(0.5, 0.5);
+	be.scale(1.0, 1.0);
 	plotMain(
 		&be,
 		600,
@@ -140,14 +135,14 @@ int main(int argc, char* argv[]) {
 		2,
 		&data
 	);
-	be.scale(2, 2);
+	be.scale(1, 1);
 	be.translate(0, 0);
 	
 	
 	
 	
-	be.translate(300, 0);
-	be.scale(0.5, 0.5);
+	be.translate(600, 0);
+	be.scale(1.0, 1.0);
 	plotMain(
 		&be,
 		600,
@@ -175,13 +170,8 @@ int main(int argc, char* argv[]) {
 		2,
 		&data
 	);
-	be.scale(2, 2);
-	be.translate(-300, 0);
+	be.scale(1, 1);
+	be.translate(-600, 0);
 	
-
-
-
-
-
 	return 0;
 }
